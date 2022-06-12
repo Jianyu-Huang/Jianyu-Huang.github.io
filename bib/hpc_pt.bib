@@ -1,6 +1,16 @@
-@article{hpc_pt,
-  title={High-performance, Distributed Training of Large-scale Deep Learning Recommendation Models},
-  author={Mudigere, Dheevatsa and Hao, Yuchen and Huang, Jianyu and Tulloch, Andrew and Sridharan, Srinivas and Liu, Xing and Ozdal, Mustafa and Nie, Jade and Park, Jongsoo and Luo, Liang and others},
-  journal={arXiv preprint arXiv:2104.05158},
-  year={2021}
+@inproceedings{hpc_pt,
+author = {Mudigere, Dheevatsa and Hao, Yuchen and Huang, Jianyu and Jia, Zhihao and Tulloch, Andrew and Sridharan, Srinivas and Liu, Xing and Ozdal, Mustafa and Nie, Jade and Park, Jongsoo and Luo, Liang and Yang, Jie (Amy) and Gao, Leon and Ivchenko, Dmytro and Basant, Aarti and Hu, Yuxi and Yang, Jiyan and Ardestani, Ehsan K. and Wang, Xiaodong and Komuravelli, Rakesh and Chu, Ching-Hsiang and Yilmaz, Serhat and Li, Huayu and Qian, Jiyuan and Feng, Zhuobo and Ma, Yinbin and Yang, Junjie and Wen, Ellie and Li, Hong and Yang, Lin and Sun, Chonglin and Zhao, Whitney and Melts, Dimitry and Dhulipala, Krishna and Kishore, KR and Graf, Tyler and Eisenman, Assaf and Matam, Kiran Kumar and Gangidi, Adi and Chen, Guoqiang Jerry and Krishnan, Manoj and Nayak, Avinash and Nair, Krishnakumar and Muthiah, Bharath and khorashadi, Mahmoud and Bhattacharya, Pallab and Lapukhov, Petr and Naumov, Maxim and Mathews, Ajit and Qiao, Lin and Smelyanskiy, Mikhail and Jia, Bill and Rao, Vijay},
+title = {Software-Hardware Co-Design for Fast and Scalable Training of Deep Learning Recommendation Models},
+year = {2022},
+isbn = {9781450386104},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3470496.3533727},
+doi = {10.1145/3470496.3533727},
+abstract = {Deep learning recommendation models (DLRMs) have been used across many business-critical services at Meta and are the single largest AI application in terms of infrastructure demand in its data-centers. In this paper, we present Neo, a software-hardware co-designed system for high-performance distributed training of large-scale DLRMs. Neo employs a novel 4D parallelism strategy that combines table-wise, row-wise, column-wise, and data parallelism for training massive embedding operators in DLRMs. In addition, Neo enables extremely high-performance and memory-efficient embedding computations using a variety of critical systems optimizations, including hybrid kernel fusion, software-managed caching, and quality-preserving compression. Finally, Neo is paired with ZionEX, a new hardware platform co-designed with Neo's 4D parallelism for optimizing communications for large-scale DLRM training. Our evaluation on 128 GPUs using 16 ZionEX nodes shows that Neo outperforms existing systems by up to 40\texttimes{} for training 12-trillion-parameter DLRM models deployed in production.},
+booktitle = {Proceedings of the 49th Annual International Symposium on Computer Architecture},
+pages = {993–1011},
+numpages = {19},
+location = {New York, New York},
+series = {ISCA '22}
 }
