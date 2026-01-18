@@ -1,36 +1,57 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" href="style.css" type="text/css"> 
-<meta name="Jianyu Huang" CONTENT=""/>
-<meta name="description" contest="" />
-<title>Places</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jianyu Huang">
+    <title>Places</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122998801-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-122998801-1');
+    </script>
+    <style>
+        .map-container {
+            position: relative;
+            padding-bottom: 75%; /* Aspect ratio 4:3 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
 </head>
 
 <body>
 
-<h3>Interests</h3>
-<ul>
-I like to travel. Here are the places where I have been.<br><br>
+<main id="main">
+    <nav>
+        <a href="index.html">&larr; Back to Home</a>
+    </nav>
+    
+    <h3>Interests</h3>
+    <section>
+        <p>I like to travel. Here are the places where I have been.</p>
+        
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=z2JlgEUHFssM.km0PKukVrHUI" title="Map of places visited"></iframe>
+        </div>
+    </section>
 
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=z2JlgEUHFssM.km0PKukVrHUI" width="640" height="480"></iframe>
-</ul>
+    <hr>
+    <small>Last updated 08/25/2015</small>
+</main>
 
-<hr noshade="">
-<small>Last updated 08/25/2015</small>
-</td></tr>
-</tbody></table>
-
-</font>
 </body>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122998801-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-122998801-1');
-</script>
 </html>

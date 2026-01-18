@@ -1,88 +1,115 @@
-h1 {
-font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
-color:#226688;
-}
-h3 {
-font-family:Georgia, serif;
-color:#226688;
-font-variant:small-caps;
-font-size:140%;
-}
-
-/*
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-}
-
-li {
-	float: left;
-}
-*/
-
-
-*
-{
-font-family:"Trebuchet MS", Helvetica, sans-serif;
+body {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
 #main {
-width: 960px;
-/*border:1px #888888 solid;*/
-/* padding: 50px; */
-/*box-shadow: 1px 1px 1px;*/
-margin-left:auto;margin-right:auto
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-#header {
-position:relative;
-height:50px;
+h1 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: #226688;
+    margin-bottom: 0.5em;
 }
 
-#header-left {
-float:left;
+h3 {
+    font-family: Georgia, serif;
+    color: #226688;
+    font-variant: small-caps;
+    font-size: 140%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 2em;
 }
 
-#header-right {
-float:right;
-color:gray;
-position:absolute;
-right:100px;
-bottom:0px;
-font-family:STKaiti, Kaiti, "Times New Roman";
-font-size: 150%;
+a {
+    text-decoration: none;
+    color: #0055aa;
 }
 
-#footer {
-position:relative;
-height:100px;
-width:100%;
+a:hover {
+    text-decoration: underline;
 }
 
-#footer-content {
-position:absolute;
-font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
-bottom:0px;
-color:gray;
-text-align:center;
-border-top: 1px #3399CC dashed;
-padding: 5px;
-font-size:70%;
-width:100%;
+/* Profile Section */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
 }
 
-.conf {
-color:#113388;
-}
-.paper{
-color:#2266aa;
-}
-.talk{
-color:#2266aa;
-}
-.poster{
-color:#2266aa;
+.profile-pic-wrapper {
+    flex: 0 0 150px;
 }
 
+.profile-pic {
+    width: 100%;
+    border-radius: 5px; /* Optional: adds rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Specific classes for content types */
+.conf, .paper, .talk, .poster {
+    color: #2266aa;
+    font-weight: bold;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-links li {
+    margin: 0;
+}
+
+.social-links a {
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic-wrapper {
+        width: 150px; /* specific width for mobile centering */
+        margin: 0 auto;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+    
+    #main {
+        padding: 15px;
+    }
+}
