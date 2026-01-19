@@ -7,6 +7,8 @@
     <meta name="description" content="Jianyu Huang's Homepage - Research Scientist at Meta">
     <title>Jianyu Huang's Homepage</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122998801-1"></script>
     <script>
@@ -26,10 +28,18 @@
         </div>
         <div class="profile-info">
             <h1>Jianyu Huang</h1>
-            <p>Research Scientist<br>
-            <a href="https://research.fb.com/">Meta Platforms, Inc.</a><br>
-            1 Hacker Way, Menlo Park, CA 94025<br>
-            Email: <tt>jianyu0huang [AT] gmail [DOT] com</tt></p>
+            <p class="role">Research Scientist</p>
+            <p><a href="https://research.fb.com/">Meta Platforms, Inc.</a></p>
+            <p>1 Hacker Way, Menlo Park, CA 94025</p>
+            <p>Email: <tt>jianyu0huang [AT] gmail [DOT] com</tt></p>
+
+            <div class="social-links-container">
+                <a href="https://github.com/jianyuh" target="_blank" title="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://scholar.google.com/citations?user=5h4eSNQAAAAJ" target="_blank" title="Google Scholar" class="social-icon"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://www.linkedin.com/in/jianyu-huang-06385926/" target="_blank" title="LinkedIn" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://ai.meta.com/people/1865453484339499/jianyu-huang/" target="_blank" title="Meta Research" class="social-icon"><i class="fas fa-building"></i></a>
+                <a href="https://jianyuh.github.io/" target="_blank" title="Blog" class="social-icon"><i class="fas fa-rss"></i></a>
+            </div>
         </div>
     </header>
 
@@ -39,15 +49,6 @@
         <p>
             I am a Research Scientist at Meta focused on the efficiency and scalability of large language models and recommendation systems. My work centers on high-performance training and inference, including low-precision hardware architectures and distributed machine learning. Over the past decade, I've had the privilege of publishing impactful research in premier venues such as SC, OSDI, ISCA, Micro, MLSys, and ACM TOMS, collaborating with world-class experts to push the boundaries of AI. I obtained my PhD in Computer Science from <a href="https://www.cs.utexas.edu">the University of Texas at Austin</a> (Advisor: Prof. <a href="http://www.cs.utexas.edu/~rvdg">Robert van de Geijn</a>).
         </p>
-
-        <p>Connect with me on:</p>
-        <ul class="social-links">
-            <li><a href="https://github.com/jianyuh" target="_blank">GitHub</a></li>
-            <li><a href="https://scholar.google.com/citations?user=5h4eSNQAAAAJ" target="_blank">Google Scholar</a></li>
-            <li><a href="https://ai.meta.com/people/1865453484339499/jianyu-huang/" target="_blank">Work</a></li>
-            <li><a href="https://jianyuh.github.io/" target="_blank">Blog</a></li>
-            <li><a href="https://www.linkedin.com/in/jianyu-huang-06385926/" target="_blank">LinkedIn</a></li>
-        </ul>
     </section>
 
     <section>
@@ -63,19 +64,68 @@
 
     <section>
         <h3>Open Source Projects</h3>
-        <ul>
-            <li><a href="https://github.com/pytorch/fbgemm">FBGEMM</a>: low-precision, high-performance matrix-matrix multiplications and convolution library for server-side inference.</li>
-            <li><a href="https://github.com/pytorch/FBGEMM/tree/main/fbgemm_gpu">FBGEMM_GPU</a>: a collection of high-performance PyTorch GPU operator libraries for training and inference, with focus on recommendation systems applications. The library provides efficient table batched embedding bag, data layout transformation, and quantization supports.</li>
-            <li><a href="https://github.com/pytorch/FBGEMM/tree/main/fbgemm_gpu/experimental/gen_ai">FBGEMM Generative AI Kernel Library</a>: A collection of PyTorch GPU operator libraries that are designed for generative AI applications, such as <a href="https://github.com/pytorch/FBGEMM/tree/main/fbgemm_gpu/experimental/gen_ai#21-llama3-paper">FP8 quantization kernels used in Llama3</a>.</li>
-            <li><a href="https://github.com/pytorch/pytorch">PyTorch</a>: <a href="https://github.com/pytorch/pytorch/commits/main/?author=jianyuh">110+ commits</a> and <a href="https://github.com/pytorch/pytorch/blob/main/CODEOWNERS">code owner for quantization/sparsity</a>.</li>
-            <li><a href="https://github.com/flame/blislab">BLISLab</a>: a sandbox for optimizing GEMM.</li>
-            <li><a href="https://github.com/flame/how-to-optimize-gemm/wiki">How to optimize GEMM</a>: step by step optimization of matrix-matrix multiplication.</li>
+        <div class="project-grid">
+            <div class="project-card">
+                <h4><a href="https://github.com/pytorch/fbgemm">FBGEMM</a></h4>
+                <p>Low-precision, high-performance matrix-matrix multiplications and convolution library for server-side inference.</p>
+            </div>
+            <div class="project-card">
+                <h4><a href="https://github.com/pytorch/FBGEMM/tree/main/fbgemm_gpu">FBGEMM_GPU</a></h4>
+                <p>High-performance PyTorch GPU operator libraries for training and inference, focusing on recommendation systems (table batched embedding bag, quantization).</p>
+            </div>
+            <div class="project-card">
+                <h4><a href="https://github.com/pytorch/FBGEMM/tree/main/fbgemm_gpu/experimental/gen_ai">FBGEMM GenAI</a></h4>
+                <p>PyTorch GPU operator libraries designed for generative AI, including <a href="https://github.com/pytorch/FBGEMM/tree/main/fbgemm_gpu/experimental/gen_ai#21-llama3-paper">FP8 quantization kernels used in Llama3</a>.</p>
+            </div>
+            <div class="project-card">
+                <h4><a href="https://github.com/pytorch/pytorch">PyTorch</a></h4>
+                <p><a href="https://github.com/pytorch/pytorch/commits/main/?author=jianyuh">110+ commits</a> and <a href="https://github.com/pytorch/pytorch/blob/main/CODEOWNERS">code owner for quantization/sparsity</a>.</p>
+            </div>
+            <div class="project-card">
+                <h4><a href="https://github.com/flame/blislab">BLISLab</a></h4>
+                <p>A sandbox for learning how to optimize GEMM step-by-step.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Featured Research</h3>
+        <ul class="featured-list">
+             <li>
+                <div class="paper-title"><a href="https://ai.meta.com/research/publications/the-llama-3-herd-of-models/">The Llama 3 Herd of Models</a></div>
+                <div class="paper-authors">Llama Team, AI @ Meta.</div>
+                <div class="paper-venue">Llama 3.1 Release, July 2024.</div>
+                <div class="paper-links">
+                    [<a href="https://arxiv.org/pdf/2407.21783">PDF</a>]
+                    [<a href="./bib/llama3.bib">BibTex</a>]
+                </div>
+            </li>
+            <li>
+                <div class="paper-title"><a href="https://arxiv.org/abs/2411.01783">Context Parallelism for Scalable Million-Token Inference</a></div>
+                <div class="paper-authors">Amy (Jie) Yang, Jingyi Yang, Aya Ibrahim, Xinfeng Xie, Bangsheng Tang, Grigory Sizov, Jeremy Reizenstein, Jongsoo Park, <u>Jianyu Huang</u>.</div>
+                <div class="paper-venue">MLSys 2025 (Conference on Machine Learning and Systems), Santa Clara, CA.</div>
+                <div class="paper-links">
+                    [<a href="./papers/cp.pdf">PDF</a>]
+                    [<a href="./bib/cp.bib">BibTex</a>]
+                    [<a href="./presentations/cp_mlsys.pdf">Slides</a>]
+                </div>
+            </li>
+            <li>
+                <div class="paper-title"><a href="https://dl.acm.org/doi/10.1145/3372419">Strassen's Algorithm Reloaded on GPUs</a></div>
+                <div class="paper-authors"><u>Jianyu Huang</u>, <a href="https://sites.google.com/site/ychdavid/cv">Chenhan D. Yu</a>, <a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a></div>
+                <div class="paper-venue">ACM Transactions on Mathematical Software (TOMS), March 2020.</div>
+                <div class="paper-links">
+                    [<a href="https://apps.cs.utexas.edu/apps/sites/default/files/tech_reports/GPUStrassen.pdf">PDF</a>]
+                    [<a href="./bib/gpustrassen.bib">BibTex</a>]
+                </div>
+            </li>
         </ul>
     </section>
 
     <section>
-        <h3>Publications</h3>
+        <h3>Selected Publications by Topic</h3>
 
+        <h4>Efficient LLM Training & Inference</h4>
         <ol>
             <li>
                 <b class="paper"><a href="https://arxiv.org/abs/2503.17924">WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training</a></b>
@@ -84,7 +134,6 @@
                 <br>Zheng Wang, Anna Cai, Xinfeng Xie, Zaifeng Pan, Yue Guan, Weiwei Chu, Jie Wang, Shikai Li, <u>Jianyu Huang</u>, Chris Cai, Yuchen Hao, Yufei Ding.
                 <br> in the 19th <i>USENIX</i><b class="conf"> Symposium on Operating Systems Design and Implementation (<a href="https://www.usenix.org/conference/osdi25">OSDI 25</a>)</b>, Boston, MA, July 2025.
             </li>
-
             <li>
                 <b class="paper"><a href="">Scaling Llama 3 Training with Efficient Parallelism Strategies</a></b>
                 [<a href="https://aisystemcodesign.github.io/papers/Llama3-ISCA25.pdf">PDF</a>]
@@ -92,56 +141,46 @@
                 <br>Weiwei Chu, Xinfeng Xie, Jiecao Yu, Jie Wang, Amar Phanishayee, Chunqiang Tang, Yuchen Hao, <u>Jianyu Huang</u>, Mustafa Ozdal, Jun Wang, Vedanuj Goswami, Naman Goyal, Abhishek Kadian, Andrew Gu, Chris Cai, Feng Tian, Xiaodong Wang, Min Si, Pavan Balaji, Ching-Hsiang Chu, Jongsoo Park.
                 <br> in the 52nd <b class="conf"> International Symposium on Computer Architecture (<a href="">ISCA 25</a>)</b>, Tokyo, Japan, June 2025.
             </li>
-
+             <li>
+                <b class="paper"><a href="https://arxiv.org/abs/2508.08192">Efficient Speculative Decoding for Llama at Scale: Challenges and Solutions</a></b>
+                [<a href="https://arxiv.org/pdf/2508.08192.pdf">PDF</a>]
+                [<a href="./bib/spec_decode.bib">BibTex</a>]
+                <br>Bangsheng Tang, Carl Chengyan Fu, Fei Kou, Grigory Sizov, Haoci Zhang, Jason Park, Jiawen Liu, Jie You, Qirui Yang, Sachin Mehta, Shengyong Cai, Xiaodong Wang, Xingyu Liu, Yunlu Li, Yanjun Zhou, Wei Wei, Zhiwei Zhao, Zixi Qi, Adolfo Victoria, Aya Ibrahim, Bram Wasti, Changkyu Kim, Daniel Haziza, Fei Sun, Giancarlo Delfin, Emily Guo, Jialin Ouyang, Jaewon Lee, <u>Jianyu Huang</u>, Jeremy Reizenstein, Lu Fang, Quinn Zhu, Ria Verma, Vlad Mihailescu, Xingwen Guo, Yan Cui, Ye Hu, Yejin Lee.
+                <br> August 2025.
+            </li>
             <li>
                 <b class="paper"><a href="https://arxiv.org/abs/2411.01783">Context Parallelism for Scalable Million-Token Inference</a></b>
                 [<a href="./papers/cp.pdf">PDF</a>]
                 [<a href="./bib/cp.bib">BibTex</a>]
                 [<a href="./presentations/cp_mlsys.pdf">Slides</a>]
-                <br>Amy (Jie) Yang, Jingyi Yang, Aya Ibrahim, Xinfeng Xie, Bangsheng Tang, Grigory Sizov, Jeremy Reizenstein, Jongsoo Park, <u>Jianyu Huang</u>.
+                <br><a href="https://www.linkedin.com/in/amy-yang-ba005ba9/">Jie (Amy) Yang</a>, Jingyi Yang, Aya Ibrahim, Xinfeng Xie, Bangsheng Tang, Grigory Sizov, Jeremy Reizenstein, <a href="https://sites.google.com/site/jongsoopark/">Jongsoo Park</a>, <u>Jianyu Huang</u>.
                 <br> in the 8th <i></i><b class="conf"> Conference on Machine Learning and Systems (<a href="https://mlsys.org/virtual/2025/papers.html?filter=titles">MLSys 2025</a>)</b>, Santa Clara, CA, May 2025.
             </li>
-
-            <li>
-                <b class="paper"><a href="https://arxiv.org/abs/2508.08192">Efficient Speculative Decoding for Llama at Scale: Challenges and Solutions</a></b>
-                [<a href="https://arxiv.org/pdf/2508.08192.pdf">PDF</a>]
-                [<a href="./bib/spec_decode.bib">BibTex</a>]
-                <br>Bangsheng Tang, Carl Chengyan Fu, Fei Kou, Grigory Sizov, Haoci Zhang, Jason Park, Jiawen Liu, Jie You, Qirui Yang, Sachin Mehta, Shengyong Cai, Xiaodong Wang, Xingyu Liu, Yunlu Li, Yanjun Zhou, Wei Wei, Zhiwei Zhao, Zixi Qi, Adolfo Victoria, Aya Ibrahim, Bram Wasti, Changkyu Kim, Daniel Haziza, Fei Sun, Giancarlo Delfin, Emily Guo, Jialin Ouyang, Jaewon Lee, <u>Jianyu Huang</u>, Jeremy Reizenstein, Lu Fang, Quinn Zhu, Ria Verma, Vlad Mihailescu, Xingwen Guo, Yan Cui, Ye Hu, Yejin Lee.
-                August 2025.
-            </li>
-
-            <li>
-                <b class="paper"><a href="https://dl.acm.org/doi/full/10.1145/3721145.3729514">SmartNIC-GPU-CPU Heterogeneous System for Large Machine Learning Model with Software-Hardware Codesign</a></b>
-                [<a href="https://dl.acm.org/doi/pdf/10.1145/3721145.3729514">PDF</a>]
-                [<a href="">BibTex</a>]
-                <br>Anqi Guo, Yuchen Hao, Xiteng Yao, Shining Yang, <u>Jianyu Huang</u>, Tony (Tong) Geng, and Martin Herbordt.
-                <br> in the <i>2025 International Conference on Supercomputing</i><b class="conf"> (<a href="https://ics25.ics.org/">ICS 25</a>)</b>, August 2025.
-            </li>
-
             <li>
                 <b class="paper"><a href="https://ai.meta.com/research/publications/the-llama-3-herd-of-models/">The Llama 3 Herd of Models</a></b>
                 [<a href="https://arxiv.org/pdf/2407.21783">PDF</a>]
                 [<a href="./bib/llama3.bib">BibTex</a>]
                 <br>Llama Team, AI @ Meta.
-                <br> in the Llama3.1 release (<a href="https://ai.meta.com/blog/meta-llama-3-1/">Llama3.1</a>)</b>, July 2024.
+                <br> in the <a href="https://ai.meta.com/blog/meta-llama-3-1/">Llama3.1 release</a>, July 2024.
             </li>
+        </ol>
 
+        <h4>Systems for Large-Scale Recommendation Models</h4>
+        <ol>
             <li>
                 <b class="paper"><a href="https://www.usenix.org/conference/osdi23/presentation/lai">AdaEmbed: Adaptive Embedding for Large-Scale Recommendation Models</a></b>
                 [<a href="https://www.usenix.org/system/files/osdi23-lai.pdf">PDF</a>]
                 [<a href="./bib/adaembed.bib">BibTex</a>]
-                <br>Fan Lai, Wei Zhang, Rui Liu, William Tsai, Xiaohan Wei, Yuxi Hu, Sabin Devkota, <u>Jianyu Huang</u>, Jongsoo Park, Xing Liu, Zeliang Chen, Ellie Wen, Paul Rivera, Jie You, Jason Chen, Mosharaf Chowdhury.
+                <br>Fan Lai, Wei Zhang, Rui Liu, William Tsai, Xiaohan Wei, Yuxi Hu, Sabin Devkota, <u>Jianyu Huang</u>, <a href="https://sites.google.com/site/jongsoopark/">Jongsoo Park</a>, Xing Liu, Zeliang Chen, Ellie Wen, Paul Rivera, Jie You, Jason Chen, Mosharaf Chowdhury.
                 <br> in the 17th <i>USENIX</i><b class="conf"> Symposium on Operating Systems Design and Implementation (<a href="https://www.usenix.org/conference/osdi23/presentation/lai">OSDI 23</a>)</b>, Boston, MA, July 2023.
             </li>
-
             <li>
                 <b class="paper"><a href="https://dl.acm.org/doi/abs/10.1145/3470496.3533727">Software-Hardware Co-design for Fast and Scalable Training of Deep Learning Recommendation Models</a></b>
                 [<a href="https://arxiv.org/pdf/2104.05158.pdf">PDF</a>]
                 [<a href="./bib/hpc_pt.bib">BibTex</a>]
-                <br>Dheevatsa Mudigere*, Yuchen Hao*, <u>Jianyu Huang*</u>, Zhihao Jia, Andrew Tulloch, Srinivas Sridharan, Xing Liu, Mustafa Ozdal, Jade Nie, Jongsoo Park, Liang Luo, Leon Gao, Dmytro Ivchenko, Aarti Basant, Yuxi Hu, Jiyan Yang, Ehsan K Ardestani, Xiaodong Wang, Rakesh Komuravelli, Ching-Hsiang Chu, Serhat Yilmaz, Huayu Li, Jiyuan Qian, Zhuobo Feng, Yinbin Ma, Junjie Yang, Ellie Wen, Hong Li, Lin Yang, Chonglin Sun, Whitney Zhao, Krishna Dhulipala, KR Kishore, Tyler Graf, Assaf Eisenman, Kiran Kumar Matam, Adi Gangidi, Pallab Bhattacharya, Guoqiang Jerry Chen, Manoj Krishnan, Krishnakumar Nair, Petr Lapukhov, Maxim Naumov, Lin Qiao, Mikhail Smelyanskiy, Bill Jia, Vijay Rao. (* denotes equal contribution.)
+                <br>Dheevatsa Mudigere*, Yuchen Hao*, <u>Jianyu Huang*</u>, Zhihao Jia, <a href="https://tullo.ch/">Andrew Tulloch</a>, Srinivas Sridharan, Xing Liu, Mustafa Ozdal, Jade Nie, <a href="https://sites.google.com/site/jongsoopark/">Jongsoo Park</a>, Liang Luo, Leon Gao, Dmytro Ivchenko, Aarti Basant, Yuxi Hu, Jiyan Yang, Ehsan K Ardestani, Xiaodong Wang, Rakesh Komuravelli, Ching-Hsiang Chu, Serhat Yilmaz, Huayu Li, Jiyuan Qian, Zhuobo Feng, Yinbin Ma, Junjie Yang, Ellie Wen, Hong Li, Lin Yang, Chonglin Sun, Whitney Zhao, Krishna Dhulipala, KR Kishore, Tyler Graf, Assaf Eisenman, Kiran Kumar Matam, Adi Gangidi, Pallab Bhattacharya, Guoqiang Jerry Chen, Manoj Krishnan, Krishnakumar Nair, Petr Lapukhov, Maxim Naumov, Lin Qiao, Mikhail Smelyanskiy, Bill Jia, Vijay Rao. (* denotes equal contribution.)
                 <br> in <i>ACM</i><b class="conf"> International Symposium on Computer Architecture (<a href="https://dl.acm.org/doi/abs/10.1145/3470496.3533727">ISCA 22</a>)</b>, New York City, June 2022.
             </li>
-
             <li>
                 <b class="paper"><a href="https://arxiv.org/abs/2103.00130">Efficient Soft-Error Detection for Low-precision Deep Learning Recommendation Models</a></b>
                 [<a href="https://arxiv.org/pdf/2103.00130.pdf">PDF</a>]
@@ -149,52 +188,55 @@
                 <br><a href="https://sites.google.com/ucr.edu/sli049/home">Sihuan Li</a>, <u>Jianyu Huang</u>, <a href="https://www.linkedin.com/in/pingtakpetertang/">Ping Tak Peter Tang</a>, Daya Khudia, <a href="https://sites.google.com/site/jongsoopark/">Jongsoo Park</a>, Harish Dattatraya Dixit, Zizhong Chen.
                 <br> in <i>IEEE International Conference on Big Data (Big Data)</i><b class="conf"> (<a href="https://bigdataieee.org/BigData2022/">BigData</a>)</b>, Pages: 1556-1563, March 2022.
             </li>
-
             <li>
                 <b class="paper"><a href="https://ieeexplore.ieee.org/abstract/document/9435938">Low-Precision Hardware Architectures Meet Recommendation Model Inference at Scale</a></b>
                 [<a href="https://arxiv.org/pdf/2105.12676.pdf">PDF</a>]
                 [<a href="./bib/low_prec_dlrm.bib">BibTex</a>]
-                <br>Zhaoxia Summer Deng, Jongsoo Park, Ping Tak Peter Tang, Haixin Liu, Jie Yang, Hector Yuen, <u>Jianyu Huang</u>, Daya S Khudia, Xiaohan Wei, Ellie Wen, Dhruv Choudhary, Raghuraman Krishnamoorthi, Carole-Jean Wu, Nadathur Satish, Changkyu Kim, Maxim Naumov, Sam Naghshineh, Misha Smelyanskiy.
+                <br>Zhaoxia Summer Deng, <a href="https://sites.google.com/site/jongsoopark/">Jongsoo Park</a>, <a href="https://www.linkedin.com/in/pingtakpetertang/">Ping Tak Peter Tang</a>, Haixin Liu, Jie Yang, Hector Yuen, <u>Jianyu Huang</u>, Daya S Khudia, Xiaohan Wei, Ellie Wen, Dhruv Choudhary, Raghuraman Krishnamoorthi, Carole-Jean Wu, Nadathur Satish, Changkyu Kim, Maxim Naumov, Sam Naghshineh, Misha Smelyanskiy.
                 <br> in <i>IEEE</i><b class="conf"> <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=40">Micro</a></b>, Volume: 41, Issue: 5, Sept.-Oct. 1 2021.
             </li>
-
             <li>
                 <b class="paper"><a href="https://arxiv.org/abs/2010.11305">Mixed-Precision Embedding Using a Cache</a></b>
                 [<a href="https://arxiv.org/pdf/2010.11305.pdf">PDF</a>]
                 [<a href="./bib/cache.bib">BibTex</a>]
                 <br><a href="https://www.linkedin.com/in/amy-yang-ba005ba9/">Jie (Amy) Yang*</a>, <u>Jianyu Huang*</u>, <a href="https://sites.google.com/site/jongsoopark/">Jongsoo Park</a>, <a href="https://www.linkedin.com/in/pingtakpetertang/">Ping Tak Peter Tang</a>, <a href="https://tullo.ch/">Andrew Tulloch</a>. October 2020. (* denotes equal contribution.)
             </li>
-
             <li>
+                <b class="paper"><a href="https://arxiv.org/abs/1906.00091">Deep Learning Recommendation Model for Personalization and Recommendation Systems</a></b>
+                [<a href="https://arxiv.org/pdf/1906.00091.pdf">PDF</a>]
+                [<a href="./bib/dlrm.bib">BibTex</a>]
+                <br>Maxim Naumov, Dheevatsa Mudigere, Hao-Jun Michael Shi, <u>Jianyu Huang</u>, Narayanan Sundaraman, <a href="https://sites.google.com/site/jongsoopark/">Jongsoo Park</a>, Xiaodong Wang, Udit Gupta, Carole-Jean Wu, Alisson G. Azzolini, Dmytro Dzhulgakov, Andrey Mallevich, Ilia Cherniavskii, Yinghai Lu, Raghuraman Krishnamoorthi, Ansha Yu, Volodymyr Kondratenko, Stephanie Pereira, Xianjie Chen, Wenlin Chen, Vijay Rao, Bill Jia, Liang Xiong, Misha Smelyanskiy.
+            </li>
+        </ol>
+
+        <h4>High-Performance Kernels & HPC</h4>
+        <ol>
+             <li>
+                <b class="paper"><a href="https://dl.acm.org/doi/full/10.1145/3721145.3729514">SmartNIC-GPU-CPU Heterogeneous System for Large Machine Learning Model with Software-Hardware Codesign</a></b>
+                [<a href="https://dl.acm.org/doi/pdf/10.1145/3721145.3729514">PDF</a>]
+                <br>Anqi Guo, Yuchen Hao, Xiteng Yao, Shining Yang, <u>Jianyu Huang</u>, Tony (Tong) Geng, and Martin Herbordt.
+                <br> in the <i>2025 International Conference on Supercomputing</i><b class="conf"> (<a href="https://ics25.ics.org/">ICS 25</a>)</b>, August 2025.
+            </li>
+             <li>
                 <b class="paper"><a href="https://dl.acm.org/doi/10.1145/3372419">Strassen's Algorithm Reloaded on GPUs</a></b>
                 [<a href="https://apps.cs.utexas.edu/apps/sites/default/files/tech_reports/GPUStrassen.pdf">PDF</a>]
                 [<a href="./bib/gpustrassen.bib">BibTex</a>]
                 <br><u>Jianyu Huang</u>, <a href="https://sites.google.com/site/ychdavid/cv">Chenhan D. Yu</a>, <a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a>
                 <br> in <i>ACM Transactions on Mathematical Software</i><b class="conf"> (<a href="https://dl.acm.org/journal/toms">TOMS</a>)</b>, Article No.: 1, March 2020.
             </li>
-
-            <li>
-                <b class="paper"><a href="https://arxiv.org/abs/1906.00091">Deep Learning Recommendation Model for Personalization and Recommendation Systems</a></b>
-                [<a href="https://arxiv.org/pdf/1906.00091.pdf">PDF</a>]
-                [<a href="./bib/dlrm.bib">BibTex</a>]
-                <br>Maxim Naumov, Dheevatsa Mudigere, Hao-Jun Michael Shi, <u>Jianyu Huang</u>, Narayanan Sundaraman, Jongsoo Park, Xiaodong Wang, Udit Gupta, Carole-Jean Wu, Alisson G. Azzolini, Dmytro Dzhulgakov, Andrey Mallevich, Ilia Cherniavskii, Yinghai Lu, Raghuraman Krishnamoorthi, Ansha Yu, Volodymyr Kondratenko, Stephanie Pereira, Xianjie Chen, Wenlin Chen, Vijay Rao, Bill Jia, Liang Xiong, Misha Smelyanskiy.
-            </li>
-
-            <li>
+             <li>
                 <b class="paper"><a href="https://arxiv.org/abs/1905.12322">A Study of BFLOAT16 for Deep Learning Training</a></b>
                 [<a href="https://arxiv.org/pdf/1905.12322.pdf">PDF</a>]
                 [<a href="./bib/bfloat16.bib">BibTex</a>]
-                <br>Dhiraj Kalamkar, Dheevatsa Mudigere, Naveen Mellempudi, Dipankar Das, Kunal Banerjee, Sasikanth Avancha, Dharma Teja Vooturi, Nataraj Jammalamadaka, <u>Jianyu Huang</u>, Hector Yuen, Jiyan Yang, Jongsoo Park, Alexander Heinecke, Evangelos Georganas, Sudarshan Srinivasan, Abhisek Kundu, Misha Smelyanskiy, Bharat Kaul, Pradeep Dubey.
+                <br>Dhiraj Kalamkar, Dheevatsa Mudigere, Naveen Mellempudi, Dipankar Das, Kunal Banerjee, Sasikanth Avancha, Dharma Teja Vooturi, Nataraj Jammalamadaka, <u>Jianyu Huang</u>, Hector Yuen, Jiyan Yang, <a href="https://sites.google.com/site/jongsoopark/">Jongsoo Park</a>, Alexander Heinecke, Evangelos Georganas, Sudarshan Srinivasan, Abhisek Kundu, Misha Smelyanskiy, Bharat Kaul, Pradeep Dubey.
             </li>
-
             <li>
                 <b class="paper"><a href="https://hpc.pnl.gov//hpcaml19/">FBGEMM: Enabling High-Performance Low-Precision Deep Learning Inference</a></b>
                 [<a href="https://arxiv.org/pdf/2101.05615.pdf">PDF</a>]
                 [<a href="./bib/fbgemm.bib">BibTex</a>]
-                <br>Daya Khudia, <u>Jianyu Huang</u>, Protonu Basu, Summer Deng, Haixin Liu, Jongsoo Park, Mikhail Smelyanskiy
+                <br>Daya Khudia, <u>Jianyu Huang</u>, Protonu Basu, Summer Deng, Haixin Liu, <a href="https://sites.google.com/site/jongsoopark/">Jongsoo Park</a>, Mikhail Smelyanskiy
                 <br> in <i><a href="https://hpc.pnl.gov//hpcaml19/">HPCaML 2019</a></i>.
             </li>
-
             <li>
                 <b class="paper"><a href="https://repositories.lib.utexas.edu/handle/2152/69013">Practical Fast Matrix Multiplication Algorithms</a></b>
                 [<a href="./papers/thesis.pdf">PDF</a>]
@@ -202,24 +244,13 @@
                 <br><u>Jianyu Huang</u>
                 <br> <i><a href="https://repositories.lib.utexas.edu/handle/2152/69013">PhD thesis</a></i>, The University of Texas at Austin,  2018.
             </li>
-
             <li>
                 <b class="paper"><a href="https://apps.cs.utexas.edu/apps/sites/default/files/tech_reports/GPUStrassen.pdf">Implementing Strassen’s Algorithm with CUTLASS on NVIDIA Volta GPUs</a></b>
                 [<a href="https://apps.cs.utexas.edu/apps/sites/default/files/tech_reports/GPUStrassen.pdf">PDF</a>]
                 [<a href="./bib/gpustrassen.bib">BibTex</a>]
                 <br><u>Jianyu Huang</u>, <a href="https://sites.google.com/site/ychdavid/cv">Chenhan D. Yu</a>, <a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a>
-                <br> <i>FLAME Working Note #88</i><b class="paper"></b>, The University of Texas at Austin, Department of Computer Science. Technical Report TR-18-08. August 23, 2018.
+                <br> <i>FLAME Working Note #88</i>, 2018.
             </li>
-
-            <li>
-                <b class="paper"><a href="https://grid.cs.gsu.edu/~tcpp/curriculum/?q=edupar18_tech_program">Learning from Optimizing Matrix-Matrix Multiplication</a></b>
-                [<a href="https://grid.cs.gsu.edu/~tcpp/curriculum/sites/default/files/paper%204_0.pdf">PDF</a>]
-                [<a href="./bib/edu2.bib">BibTex</a>]
-                <br><a href="http://www.cs.utexas.edu/~dnp/">Devangi N. Parikh</a>, <u>Jianyu Huang</u>, <a href="https://www.cs.utexas.edu/directory/margaret-myers">Margaret E. Myers</a>, <a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a>
-                <br>in <i>
-                <a href="https://grid.cs.gsu.edu/~tcpp/curriculum/?q=edupar18">8th NSF/TCPP Workshop on Parallel and Distributed Computing Education (EduPar-18)</a>, co-located with </i><b class="conf"> <a href="http://www.ipdps.org/ipdps2018/2018_call_for_workshops.html">IPDPS18</a></b>, Vancouver, British Columbia, Canada, 2018.
-            </li>
-
             <li>
                 <b class="paper"><a href="https://epubs.siam.org/doi/abs/10.1137/17M1135578">Strassen's Algorithm for Tensor Contraction</a></b>
                 [<a href="./papers/sisc18.pdf">PDF</a>]
@@ -227,55 +258,53 @@
                 <br><u>Jianyu Huang</u>, <a href="https://www.ices.utexas.edu/people/1372/">Devin A. Matthews</a>, <a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a>
                 <br> in <i>SIAM Journal on Scientific Computing</i><b class="conf"> (<a href="https://www.siam.org/journals/sisc.php">SISC</a>)</b>, 40(3):C305-C326, 2018.
             </li>
+            <li>
+                <b class="paper"><a href="http://www.ipdps.org/ipdps2017/2017_advance_program.html">Generating Families of Practical Fast Matrix Multiplication Algorithms</a></b>
+                [<a href="./papers/ipdps17.pdf">PDF</a>]
+                [<a href="./bib/fmm.bib">BibTex</a>]
+                <br><u>Jianyu Huang</u>, <a href="http://www.leslierice.tech/">Leslie Rice</a>, <a href="https://www.ices.utexas.edu/people/1372/">Devin A. Matthews</a>, <a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a>
+                <br> in <i>31st IEEE International Parallel and Distributed Processing Symposium</i><b class="conf"> (<a href="http://www.ipdps.org/ipdps2017">IPDPS17</a>)</b>, Orlando, FL, May 29-June 2, 2017.
+            </li>
+             <li>
+                <b class="paper"><a href="http://dl.acm.org/citation.cfm?id=3014983">Strassen's Algorithm Reloaded</a></b>
+                [<a href="./papers/sc16.pdf">PDF</a>]
+                [<a href="./bib/strassen.bib">BibTex</a>]
+                <br><u>Jianyu Huang</u>, <a href="http://www.cs.utexas.edu/~tms/">Tyler M. Smith</a>, <a href="https://www.linkedin.com/in/gregoryhenry">Greg M. Henry</a>, <a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a>
+                <br>in <i>The International Conference for High Performance Computing, Networking, Storage and Analysis</i><b class="conf"> (<a href="http://sc16.supercomputing.org/presentation/?id=pap112&sess=sess147">SC16</a>)</b>, Salt Lake City, UT, November 2016.
+            </li>
+            <li>
+                <b class="paper"><a href="http://dl.acm.org/citation.cfm?id=2807601">Performance Optimization for the K-Nearest Neighbors Kernel on x86 Architectures</a></b>
+                [<a href="http://padas.ices.utexas.edu/static/papers/sc15nn.pdf">PDF</a>]
+                [<a href="./bib/knn.bib">BibTex</a>]
+                <br><a href="https://sites.google.com/site/ychdavid/cv">Chenhan D. Yu</a>, <u>Jianyu Huang</u>, <a href="https://www.linkedin.com/in/woody-austin-51875ab4">Woody Austin</a>, Bo Xiao, <a href="https://www.ices.utexas.edu/people/1056/">George Biros</a>
+                <br>in <i>The International Conference for High Performance Computing, Networking, Storage and Analysis</i><b class="conf"> (<a href="http://sc15.supercomputing.org">SC15</a>)</b>, Austin, TX, November 2015.
+            </li>
+        </ol>
 
+        <h4>Education & HPC</h4>
+         <ol>
+             <li>
+                <b class="paper"><a href="https://grid.cs.gsu.edu/~tcpp/curriculum/?q=edupar18_tech_program">Learning from Optimizing Matrix-Matrix Multiplication</a></b>
+                [<a href="https://grid.cs.gsu.edu/~tcpp/curriculum/sites/default/files/paper%204_0.pdf">PDF</a>]
+                [<a href="./bib/edu2.bib">BibTex</a>]
+                <br><a href="http://www.cs.utexas.edu/~dnp/">Devangi N. Parikh</a>, <u>Jianyu Huang</u>, <a href="https://www.cs.utexas.edu/directory/margaret-myers">Margaret E. Myers</a>, <a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a>
+                <br>in <i><a href="https://grid.cs.gsu.edu/~tcpp/curriculum/?q=edupar18">8th NSF/TCPP Workshop on Parallel and Distributed Computing Education (EduPar-18)</a>, co-located with </i><b class="conf"> <a href="http://www.ipdps.org/ipdps2018/2018_call_for_workshops.html">IPDPS18</a></b>, Vancouver, British Columbia, Canada, 2018.
+            </li>
             <li>
                 <b class="paper"><a href="http://sc17.supercomputing.org/presentation/?id=wkpr381&sess=sess448">Lowering Barriers into HPC through Open Education</a></b>
                 [<a href="https://grid.cs.gsu.edu/~tcpp/curriculum/sites/default/files/EduHPC17_LoweringBarriersintoHPCthroughOpenEd.pdf">PDF</a>]
                 [<a href="./bib/edu.bib">BibTex</a>]
                 <br><a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a>, <u>Jianyu Huang</u>, <a href="https://www.cs.utexas.edu/directory/margaret-myers">Margaret E. Myers</a>, <a href="http://www.cs.utexas.edu/~dnp/">Devangi N. Parikh</a>, <a href="http://www.cs.utexas.edu/~tms/">Tyler M. Smith</a>
-                <br>in <i>
-                <a href="http://sc17.supercomputing.org/session/?sess=sess448">Workshop on Education for High Performance Computing (EduHPC)</a>, co-located with </i><b class="conf"> <a href="http://sc17.supercomputing.org/presentation/?id=wkpr381&sess=sess448">SC17</a></b>, Denver, CO, November 2017.
+                <br>in <i><a href="http://sc17.supercomputing.org/session/?sess=sess448">Workshop on Education for High Performance Computing (EduHPC)</a>, co-located with </i><b class="conf"> <a href="http://sc17.supercomputing.org/presentation/?id=wkpr381&sess=sess448">SC17</a></b>, Denver, CO, November 2017.
             </li>
-
-            <li>
-                <b class="paper"><a href="http://www.ipdps.org/ipdps2017/2017_advance_program.html">Generating Families of Practical Fast Matrix Multiplication Algorithms</a></b>
-                [<a href="./papers/ipdps17.pdf">PDF</a>]
-                [<a href="./bib/fmm.bib">BibTex</a>]
-                [<a href="./code/fmm-gen.tar.gz">Code</a>]
-                [<a href="./code/ipdps17_artifact.pdf">Artifact</a>]
-                [<a href="./presentations/fmm_ipdps17.pptx">PPTX</a>]
-                <br><u>Jianyu Huang</u>, <a href="http://www.leslierice.tech/">Leslie Rice</a>, <a href="https://www.ices.utexas.edu/people/1372/">Devin A. Matthews</a>, <a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a>
-                <br> in <i>31st IEEE International Parallel and Distributed Processing Symposium</i><b class="conf"> (<a href="http://www.ipdps.org/ipdps2017">IPDPS17</a>)</b>, Orlando, FL, May 29-June 2, 2017.
-            </li>
-
-            <li>
-                <b class="paper"><a href="http://dl.acm.org/citation.cfm?id=3014983">Strassen's Algorithm Reloaded</a></b>
-                [<a href="./papers/sc16.pdf">PDF</a>]
-                [<a href="./bib/strassen.bib">BibTex</a>]
-                [<a href="https://bitbucket.org/tlrmchlsmth/blis-strassen">Code</a>]
-                [<a href="./presentations/strassen_sc16.pptx">PPTX</a>]
-                <br><u>Jianyu Huang</u>, <a href="http://www.cs.utexas.edu/~tms/">Tyler M. Smith</a>, <a href="https://www.linkedin.com/in/gregoryhenry">Greg M. Henry</a>, <a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a>
-                <br>in <i>The International Conference for High Performance Computing, Networking, Storage and Analysis</i><b class="conf"> (<a href="http://sc16.supercomputing.org/presentation/?id=pap112&sess=sess147">SC16</a>)</b>, Salt Lake City, UT, November 2016.
-            </li>
-
             <li>
                 <b class="paper"><a href="https://github.com/flame/blislab">BLISlab: A Sandbox for Optimizing GEMM</a></b>
                 [<a href="http://arxiv.org/pdf/1609.00076v1.pdf">PDF</a>]
                 [<a href="./bib/blislab.bib">BibTex</a>]
-                [<a href="https://github.com/flame/blislab">Code</a>]
                 <br><u>Jianyu Huang</u>, <a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a>
-                <br> <i>FLAME Working Note #80</i><b class="paper"></b>, The University of Texas at Austin, Department of Computer Science. Technical Report TR-16-13. August 31, 2016.
+                <br> <i>FLAME Working Note #80</i>, 2016.
             </li>
-
-            <li>
-                <b class="paper"><a href="http://dl.acm.org/citation.cfm?id=2807601">Performance Optimization for the K-Nearest Neighbors Kernel on x86 Architectures</a></b>
-                [<a href="http://padas.ices.utexas.edu/static/papers/sc15nn.pdf">PDF</a>]
-                [<a href="./bib/knn.bib">BibTex</a>]
-                [<a href="https://github.com/ChenhanYu/rnn">Code</a>]
-                <br><a href="https://sites.google.com/site/ychdavid/cv">Chenhan D. Yu</a>, <u>Jianyu Huang</u>, <a href="https://www.linkedin.com/in/woody-austin-51875ab4">Woody Austin</a>, Bo Xiao, <a href="https://www.ices.utexas.edu/people/1056/">George Biros</a>
-                <br>in <i>The International Conference for High Performance Computing, Networking, Storage and Analysis</i><b class="conf"> (<a href="http://sc15.supercomputing.org">SC15</a>)</b>, Austin, TX, November 2015.
-            </li>
-        </ol>
+         </ol>
     </section>
 
     <section>
@@ -283,44 +312,38 @@
         <ol>
             <li>
                 <b class="talk">Scaling LLM Inference: Innovations in Tensor Parallelism, Context Parallelism, and Expert Parallelism</b>
-                (with Xiaodong Wang, Cen Zhao)
+                (with <a href="https://www.linkedin.com/in/xiaodong-wang-cornell/">Xiaodong Wang</a>, <a href="http://www.linkedin.com/in/cen-zhao-b70a3028">Cen Zhao</a>)
                 [<a href="https://engineering.fb.com/2025/10/17/ai-research/scaling-llm-inference-innovations-tensor-parallelism-context-parallelism-expert-parallelism/">Blog</a>]
-                <br>in <i>Meta Engineering Blog</i><b class="conf"></b>, October 2025.
+                <br>in <i>Meta Engineering Blog</i>, October 2025.
             </li>
-
             <li>
                 <b class="talk">MetaShuffling: Accelerating Llama 4 MoE Inference</b>
-                (with Shikai Li, Gefei Zuo, Jason Park, Zoey Sun, Xiaozhu Meng, Xiaodong Wang, Hongtao Yu, Changkyu Kim, CQ Tang, Stephen Chen)
-                [<a href="https://pytorch.org/blog/metashuffling-accelerating-llama-4-moe-inference/">Blog</a>]
-                <br>in <i>PyTorch Technical Blog</i><b class="conf"></b>, May 2025.
+                (with Shikai Li, Gefei Zuo, Jason Park, Zoey Sun, Xiaozhu Meng, <a href="https://www.linkedin.com/in/xiaodong-wang-cornell/">Xiaodong Wang</a>, Hongtao Yu, Changkyu Kim, CQ Tang, Stephen Chen)
+                [<a href="https://pytorch.org/blog/metashuffling-accelerating-llama-4-moE-inference/">Blog</a>]
+                <br>in <i>PyTorch Technical Blog</i>, May 2025.
             </li>
-
             <li>
                 <b class="talk">INT4 Decoding GQA CUDA Optimizations for LLM Inference</b>
-                (with Sarunya Pumma, Jongsoo Park, Amy Yang, Jaewon Lee, Daniel Haziza, Grigory Sizov, Jeremy Reizenstein, Jeff Johnson, Ying Zhang)
+                (with Sarunya Pumma, <a href="https://sites.google.com/site/jongsoopark/">Jongsoo Park</a>, <a href="https://www.linkedin.com/in/amy-yang-ba005ba9/">Amy Yang</a>, Jaewon Lee, Daniel Haziza, Grigory Sizov, Jeremy Reizenstein, Jeff Johnson, Ying Zhang)
                 [<a href="https://pytorch.org/blog/int4-decoding/">Blog</a>]
-                <br>in <i>PyTorch Technical Blog</i><b class="conf"></b>, June 2024.
+                <br>in <i>PyTorch Technical Blog</i>, June 2024.
             </li>
-
             <li>
                 <b class="talk">Introduction to Quantization on PyTorch</b>
                 [<a href="https://pytorch.org/blog/introduction-to-quantization-on-pytorch/">Blog</a>]
-                <br>in <i>PyTorch Technical Blog</i><b class="conf"></b>, 2020.
+                <br>in <i>PyTorch Technical Blog</i>, 2020.
             </li>
-
             <li>
                 <b class="talk">Dynamic Quantization on BERT</b>
                 [<a href="https://pytorch.org/tutorials/intermediate/dynamic_quantization_bert_tutorial.html">Tutorial</a>]
-                <br>in <i>PyTorch Tutorials</i><b class="conf"></b>, 2019.
+                <br>in <i>PyTorch Tutorials</i>, 2019.
             </li>
-
             <li>
                 <b class="talk">Strassen's Algorithm for Tensor Contraction</b>
                 [<a href="./posters/tensor_strassen_poster.pdf">PDF</a>]
-                (with <a href="https://www.ices.utexas.edu/people/1372">Devin A. Matthews</a> and <a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a>)
-                <br>in <i>The International Conference for High Performance Computing, Networking, Storage and Analysis</i><b class="conf"> (<a href="http://sc17.supercomputing.org">SC17</a>)</b>, Denver, CO, November 2017.
+                (with <a href="https://www.ices.utexas.edu/people/1372/">Devin A. Matthews</a> and <a href="http://www.cs.utexas.edu/~rvdg/">Robert A. van de Geijn</a>)
+                <br>in <i>The International Conference for High Performance Computing, Networking, Storage and Analysis</i> (<a href="http://sc17.supercomputing.org">SC17</a>), Denver, CO, November 2017.
             </li>
-
             <li>
                 <b class="talk">High-performance Primitives for Machine Learning Targeting Mobile Platforms</b>
                 (with <a href="https://sites.google.com/site/ychdavid/cv">Chenhan D. Yu</a>)
@@ -393,7 +416,7 @@
         </p>
 
         <p>
-            If you want to know more about the performance optimizations for matrix multiplication (one of the most important building blocks for deep learning), you might be interested in <a href="https://github.com/flame/how-to-optimize-gemm/wiki">how to optimize GEMM</a> and <a href="https://github.com/flame/blislab">BLISlab</a>. If you want to learn about the practical implementations of the fast matrix multiplication algorithms like <a href="https://en.wikipedia.org/wiki/Strassen_algorithm">Strassen's algorithm</a>, you might be interested in <a href="./papers/thesis.pdf">my thesis</a>.
+            If you want to know more about the performance optimizations for matrix multiplication, you might be interested in <a href="https://github.com/flame/how-to-optimize-gemm/wiki">how to optimize GEMM</a> and <a href="https://github.com/flame/blislab">BLISlab</a>.
         </p>
     </section>
 
